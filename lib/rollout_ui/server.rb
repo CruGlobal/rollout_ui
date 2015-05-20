@@ -72,5 +72,21 @@ module RolloutUi
 
       redirect url_path
     end
+
+    post '/:feature/delete' do
+      wrapper.remove_feature(params["features"])
+      redirect path_prefix + '/'
+    end
+
+    post '/new' do
+      wrapper.add_feature(params["name"])
+      redirect path_prefix
+    end
+
+    private
+
+    def wrapper
+      @wrapper ||= RolloutUi::Wrapper.new
+    end
   end
 end

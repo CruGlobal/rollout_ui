@@ -3,3 +3,10 @@
     <li id="<%= feature.name %>" class="feature clearfix"><%= partial 'feature', :feature => feature %></li>
   <% end %>
 </ul>
+
+<div class="add-feature">
+  <form accept-charset="UTF-8" action="<%= url_path("/new") %>" class="percentage_form" method="post">
+    <input name="name" placeholder="feature_name"></input>
+    <button>Add Feature</button>
+  </form>
+</div>

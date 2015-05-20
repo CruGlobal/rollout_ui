@@ -7,7 +7,7 @@ require "active_resource/railtie"
 Bundler.require
 
 require "rollout_ui"
-require "rollout_ui/engine"
+require "rollout_ui/server"
 
 module Dummy
   class Application < Rails::Application
